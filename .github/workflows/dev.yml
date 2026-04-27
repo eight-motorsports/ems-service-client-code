@@ -1,0 +1,55 @@
+name: Regenerate Dev TypeScript-Axios Client
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+  schedule:
+    - cron: '*/15 * * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout develop branch
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Download Dev OpenAPI spec
+        run: |
+          curl -fSL "${{ secrets.SPEC_URL_DEV }}" -o spec.yaml
+
+      - name: Install OpenAPI Generator CLI
+        run: |
+          npm install @openapitools/openapi-generator-cli -g
+
+      - name: Generate TS-Axios client
+        run: |
+          rm -rf generated-client
+          openapi-generator-cli generate \
+            -i spec.yaml \
+            -g typescript-axios \
+            -o generated-client \
+            --skip-validate-spec
+
+      - name: Commit and push generated client
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: regenerate dev TS-Axios client"
+            git push origin develop
+          fi
