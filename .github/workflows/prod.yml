@@ -37,12 +37,13 @@ jobs:
       # 6. Generate the TypeScript-Axios client (skip validation if anything else fails) :contentReference[oaicite:4]{index=4}
       - name: Generate TS-Axios client
         run: |
+          rm -rf generated-client
+          
           openapi-generator-cli generate \
             -i spec.yaml \
             -g typescript-axios \
             -o generated-client \
             --skip-validate-spec
-
       # 7. Sync over generated code and commit if changed
       - name: Sync generated client & push
         run: |
