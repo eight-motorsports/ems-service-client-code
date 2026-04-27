@@ -1,0 +1,12 @@
+{
+  "name": "@eight-motorsports/ems-service-client-code",
+  "version": "0.0.1",
+  "main": "generated-client/index.ts",
+  "types": "generated-client/index.ts",
+  "files": [
+    "generated-client"
+  ],
+  "dependencies": {
+    "axios": "^1.7.0"
+  }
+}
