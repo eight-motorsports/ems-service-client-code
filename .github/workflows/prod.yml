@@ -1,8 +1,8 @@
-name: Regenerate TypeScript-Axios Client
+name: Regenerate Prod TypeScript-Axios Client
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -11,49 +11,95 @@ permissions:
 jobs:
   generate-and-push:
     runs-on: ubuntu-latest
+
     steps:
-      # 1. Checkout this repo (with token to push later)
-      - name: Checkout origin repo
-        uses: actions/checkout@v3
+      - name: Checkout main branch
+        uses: actions/checkout@v4
         with:
-          persist-credentials: true  # leave GITHUB_TOKEN in git config
-          fetch-depth: 0            # full history to avoid detached HEAD
+          ref: main
+          persist-credentials: true
+          fetch-depth: 0
 
-      # 2. Download the live OpenAPI spec
-      - name: Download OpenAPI spec
+      - name: Download Prod OpenAPI spec
         run: |
-          curl -sSL "${{ secrets.SPEC_URL }}" -o spec.yaml
+          curl -fSL "${{ secrets.SPEC_URL }}" -o spec.yaml
 
-      # 4. (Optional) Show a base64‐encoded snippet to inspect without redaction :contentReference[oaicite:3]{index=3}
-      - name: Preview spec (base64)
-        run: |
-          head -n 20 spec.yaml | base64
-
-      # 5. Install the OpenAPI Generator CLI
       - name: Install OpenAPI Generator CLI
         run: |
           npm install @openapitools/openapi-generator-cli -g
 
-      # 6. Generate the TypeScript-Axios client (skip validation if anything else fails) :contentReference[oaicite:4]{index=4}
       - name: Generate TS-Axios client
         run: |
           rm -rf generated-client
-          
+
           openapi-generator-cli generate \
             -i spec.yaml \
             -g typescript-axios \
             -o generated-client \
             --skip-validate-spec
-      # 7. Sync over generated code and commit if changed
-      - name: Sync generated client & push
+
+      - name: Commit and push generated client
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add -A
-          
+
           if git diff --cached --quiet; then
-            echo "✅ No changes to commit"
+            echo "No changes to commit"
           else
-            git commit -m "chore: regenerate TS-Axios client"
-            git push
+            git commit -m "chore: regenerate prod TS-Axios client"
+            git push origin main
+          finame: Regenerate Prod TypeScript-Axios Client
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Download Prod OpenAPI spec
+        run: |
+          curl -fSL "${{ secrets.SPEC_URL }}" -o spec.yaml
+
+      - name: Install OpenAPI Generator CLI
+        run: |
+          npm install @openapitools/openapi-generator-cli -g
+
+      - name: Generate TS-Axios client
+        run: |
+          rm -rf generated-client
+
+          openapi-generator-cli generate \
+            -i spec.yaml \
+            -g typescript-axios \
+            -o generated-client \
+            --skip-validate-spec
+
+      - name: Commit and push generated client
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: regenerate prod TS-Axios client"
+            git push origin main
           fi
