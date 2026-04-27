@@ -34,6 +34,7 @@ jobs:
       - name: Generate TS-Axios client
         run: |
           rm -rf generated-client
+          
           openapi-generator-cli generate \
             -i spec.yaml \
             -g typescript-axios \
