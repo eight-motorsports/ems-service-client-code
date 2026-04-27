@@ -1,12 +1,14 @@
 {
   "name": "@eight-motorsports/ems-service-client-code",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Generated TypeScript Axios client for EMS Service API",
   "main": "generated-client/index.ts",
   "types": "generated-client/index.ts",
   "files": [
     "generated-client"
   ],
   "dependencies": {
-    "axios": "^1.7.0"
+    "axios": "^1.7.9"
   }
 }
