@@ -164,8 +164,8 @@ const { status, data } = await apiInstance.savePartsBike(
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-|**200** | Parts bike saved successfully |  -  |
 |**401** | Missing or invalid license key |  -  |
+|**200** | Parts bike saved successfully |  -  |
 |**400** | Invalid parts bike data or referenced bike variant does not exist |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -219,8 +219,8 @@ const { status, data } = await apiInstance.searchPartsBikes(
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**401** | Missing or invalid license key |  -  |
-|**400** | Invalid search request |  -  |
 |**200** | Parts bikes searched successfully |  -  |
+|**400** | Invalid search request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

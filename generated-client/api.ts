@@ -113,9 +113,9 @@ export interface ContentDisposition {
      * @deprecated
      */
     'readDate'?: string;
+    'inline'?: boolean;
     'attachment'?: boolean;
     'formData'?: boolean;
-    'inline'?: boolean;
 }
 export interface EbayToken {
     'id'?: number;
