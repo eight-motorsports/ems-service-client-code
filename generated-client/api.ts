@@ -137,7 +137,6 @@ export interface ErrorResponse {
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
-    'connection'?: Array<string>;
     'contentDisposition'?: ContentDisposition;
     'acceptCharset'?: Array<string>;
     'location'?: string;
@@ -147,12 +146,13 @@ export interface ErrorResponseHeaders {
     'lastModified'?: number;
     'date'?: number;
     'contentLength'?: number;
-    'bearerAuth'?: string;
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
+    'connection'?: Array<string>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
+    'bearerAuth'?: string;
     'cacheControl'?: string;
     'etag'?: string;
     'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
@@ -198,11 +198,11 @@ export interface ErrorResponseHeadersContentLanguage {
     'iso3Country'?: string;
 }
 export interface ErrorResponseHeadersHost {
-    'hostString'?: string;
     'address'?: ErrorResponseHeadersHostAddress;
     'port'?: number;
     'unresolved'?: boolean;
     'hostName'?: string;
+    'hostString'?: string;
 }
 export interface ErrorResponseHeadersHostAddress {
     'hostAddress'?: string;
@@ -222,11 +222,11 @@ export interface ErrorResponseHeadersHostAddress {
 }
 export interface HttpStatusCode {
     'error'?: boolean;
+    'is4xxClientError'?: boolean;
+    'is5xxServerError'?: boolean;
     'is1xxInformational'?: boolean;
     'is2xxSuccessful'?: boolean;
     'is3xxRedirection'?: boolean;
-    'is4xxClientError'?: boolean;
-    'is5xxServerError'?: boolean;
 }
 export interface Make {
     'id'?: number;
@@ -260,8 +260,8 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalPages'?: number;
     'totalElements'?: number;
+    'totalPages'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
@@ -500,7 +500,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
             // authentication LicenseKey required
             await setApiKeyToObject(localVarHeaderParameter, "X-License-Key", configuration)
 
-            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
+            localVarHeaderParameter['Accept'] = 'text/csv,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
