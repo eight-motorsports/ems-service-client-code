@@ -58,8 +58,8 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**200** | Parts bike deleted successfully |  -  |
-|**400** | Parts bike does not exist |  -  |
 |**401** | Missing or invalid license key |  -  |
+|**400** | Parts bike does not exist |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -111,8 +111,8 @@ const { status, data } = await apiInstance.getPartsBikeDetails(
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**200** | Parts bike details retrieved successfully |  -  |
-|**400** | Parts bike does not exist |  -  |
 |**401** | Missing or invalid license key |  -  |
+|**400** | Parts bike does not exist |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
