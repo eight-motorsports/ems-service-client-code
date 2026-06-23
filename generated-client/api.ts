@@ -137,7 +137,6 @@ export interface ErrorResponse {
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
-    'connection'?: Array<string>;
     'contentDisposition'?: ContentDisposition;
     'acceptCharset'?: Array<string>;
     'location'?: string;
@@ -150,6 +149,7 @@ export interface ErrorResponseHeaders {
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
+    'connection'?: Array<string>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
     'bearerAuth'?: string;
@@ -500,7 +500,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
             // authentication LicenseKey required
             await setApiKeyToObject(localVarHeaderParameter, "X-License-Key", configuration)
 
-            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
+            localVarHeaderParameter['Accept'] = 'text/csv,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
