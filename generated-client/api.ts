@@ -129,9 +129,9 @@ export interface ErrorResponse {
     'body'?: ProblemDetail;
     'statusCode'?: HttpStatusCode;
     'detailMessageArguments'?: Array<object>;
-    'typeMessageCode'?: string;
     'detailMessageCode'?: string;
     'titleMessageCode'?: string;
+    'typeMessageCode'?: string;
     'headers'?: ErrorResponseHeaders;
 }
 export interface ErrorResponseHeaders {
@@ -260,8 +260,8 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalPages'?: number;
     'totalElements'?: number;
+    'totalPages'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
