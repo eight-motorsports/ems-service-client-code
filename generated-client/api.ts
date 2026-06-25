@@ -260,8 +260,8 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalPages'?: number;
     'totalElements'?: number;
+    'totalPages'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
