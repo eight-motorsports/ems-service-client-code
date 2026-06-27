@@ -137,9 +137,8 @@ export interface ErrorResponse {
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
-    'connection'?: Array<string>;
-    'contentDisposition'?: ContentDisposition;
     'acceptCharset'?: Array<string>;
+    'contentDisposition'?: ContentDisposition;
     'location'?: string;
     'empty'?: boolean;
     'host'?: ErrorResponseHeadersHost;
@@ -150,6 +149,7 @@ export interface ErrorResponseHeaders {
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
+    'connection'?: Array<string>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
     'bearerAuth'?: string;
@@ -247,9 +247,9 @@ export interface MediaType {
     'subtype'?: string;
     'parameters'?: { [key: string]: string; };
     'qualityValue'?: number;
+    'subtypeSuffix'?: string;
     'wildcardType'?: boolean;
     'wildcardSubtype'?: boolean;
-    'subtypeSuffix'?: string;
     'charset'?: string;
     'concrete'?: boolean;
 }
