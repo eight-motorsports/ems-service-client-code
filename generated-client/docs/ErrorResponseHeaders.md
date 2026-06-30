@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**connection** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **contentDisposition** | [**ContentDisposition**](ContentDisposition.md) |  | [optional] [default to undefined]
 **acceptCharset** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **location** | **string** |  | [optional] [default to undefined]
+**connection** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **empty** | **boolean** |  | [optional] [default to undefined]
 **host** | [**ErrorResponseHeadersHost**](ErrorResponseHeadersHost.md) |  | [optional] [default to undefined]
 **all** | **{ [key: string]: string; }** |  | [optional] [default to undefined]
@@ -23,8 +23,6 @@ Name | Type | Description | Notes
 **bearerAuth** | **string** |  | [optional] [default to undefined]
 **cacheControl** | **string** |  | [optional] [default to undefined]
 **etag** | **string** |  | [optional] [default to undefined]
-**acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
-**basicAuth** | **string** |  | [optional] [default to undefined]
 **accept** | [**Array&lt;MediaType&gt;**](MediaType.md) |  | [optional] [default to undefined]
 **acceptLanguageAsLocales** | [**Array&lt;ErrorResponseHeadersContentLanguage&gt;**](ErrorResponseHeadersContentLanguage.md) |  | [optional] [default to undefined]
 **acceptPatch** | [**Array&lt;MediaType&gt;**](MediaType.md) |  | [optional] [default to undefined]
@@ -41,6 +39,8 @@ Name | Type | Description | Notes
 **ifNoneMatch** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **ifUnmodifiedSince** | **number** |  | [optional] [default to undefined]
 **pragma** | **string** |  | [optional] [default to undefined]
+**acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
+**basicAuth** | **string** |  | [optional] [default to undefined]
 **upgrade** | **string** |  | [optional] [default to undefined]
 **vary** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **ifModifiedSince** | **number** |  | [optional] [default to undefined]
@@ -51,10 +51,10 @@ Name | Type | Description | Notes
 import { ErrorResponseHeaders } from './api';
 
 const instance: ErrorResponseHeaders = {
-    connection,
     contentDisposition,
     acceptCharset,
     location,
+    connection,
     empty,
     host,
     all,
@@ -69,8 +69,6 @@ const instance: ErrorResponseHeaders = {
     bearerAuth,
     cacheControl,
     etag,
-    acceptLanguage,
-    basicAuth,
     accept,
     acceptLanguageAsLocales,
     acceptPatch,
@@ -87,6 +85,8 @@ const instance: ErrorResponseHeaders = {
     ifNoneMatch,
     ifUnmodifiedSince,
     pragma,
+    acceptLanguage,
+    basicAuth,
     upgrade,
     vary,
     ifModifiedSince,
