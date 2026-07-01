@@ -473,8 +473,8 @@ const { status, data } = await apiInstance.saveBikeVariant(
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-|**401** | Missing or invalid license key |  -  |
 |**200** | Bike variant saved successfully |  -  |
+|**401** | Missing or invalid license key |  -  |
 |**400** | Invalid bike variant payload |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -639,8 +639,8 @@ const { status, data } = await apiInstance.uploadManual(
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-|**401** | Missing or invalid license key |  -  |
 |**400** | Invalid bike variant id, missing file, or invalid file type |  -  |
+|**401** | Missing or invalid license key |  -  |
 |**200** | Service manual uploaded successfully |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -111,8 +111,8 @@ const { status, data } = await apiInstance.getPartsBikeDetails(
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**400** | Parts bike does not exist |  -  |
-|**200** | Parts bike details retrieved successfully |  -  |
 |**401** | Missing or invalid license key |  -  |
+|**200** | Parts bike details retrieved successfully |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
