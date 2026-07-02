@@ -113,9 +113,9 @@ export interface ContentDisposition {
      * @deprecated
      */
     'readDate'?: string;
-    'inline'?: boolean;
     'attachment'?: boolean;
     'formData'?: boolean;
+    'inline'?: boolean;
 }
 export interface EbayToken {
     'id'?: number;
@@ -127,12 +127,12 @@ export interface EbayToken {
 }
 export interface ErrorResponse {
     'body'?: ProblemDetail;
+    'headers'?: ErrorResponseHeaders;
     'statusCode'?: HttpStatusCode;
     'detailMessageArguments'?: Array<object>;
     'typeMessageCode'?: string;
     'detailMessageCode'?: string;
     'titleMessageCode'?: string;
-    'headers'?: ErrorResponseHeaders;
 }
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
@@ -146,8 +146,9 @@ export interface ErrorResponseHeaders {
     'lastModified'?: number;
     'date'?: number;
     'contentLength'?: number;
-    'origin'?: string;
     'contentType'?: MediaType;
+    'ifModifiedSince'?: number;
+    'origin'?: string;
     'range'?: Array<object>;
     'connection'?: Array<string>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
@@ -175,7 +176,6 @@ export interface ErrorResponseHeaders {
     'pragma'?: string;
     'upgrade'?: string;
     'vary'?: Array<string>;
-    'ifModifiedSince'?: number;
 }
 export interface ErrorResponseHeadersAcceptLanguageInner {
     'range'?: string;
@@ -198,11 +198,11 @@ export interface ErrorResponseHeadersContentLanguage {
     'iso3Country'?: string;
 }
 export interface ErrorResponseHeadersHost {
-    'hostString'?: string;
     'address'?: ErrorResponseHeadersHostAddress;
     'port'?: number;
     'unresolved'?: boolean;
     'hostName'?: string;
+    'hostString'?: string;
 }
 export interface ErrorResponseHeadersHostAddress {
     'hostAddress'?: string;
@@ -260,16 +260,16 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalElements'?: number;
     'totalPages'?: number;
+    'totalElements'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
     'number'?: number;
     'sort'?: SortObject;
-    'numberOfElements'?: number;
     'first'?: boolean;
     'last'?: boolean;
+    'numberOfElements'?: number;
     'empty'?: boolean;
 }
 export interface PageableObject {
@@ -904,7 +904,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
                 localVarFormParams.append('manual', manual as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1960,7 +1960,7 @@ export const PartsBikeControllerApiAxiosParamCreator = function (configuration?:
                 localVarFormParams.append('picture', picture as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
