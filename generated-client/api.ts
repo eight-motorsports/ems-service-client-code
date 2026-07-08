@@ -147,18 +147,10 @@ export interface ErrorResponseHeaders {
     'lastModified'?: number;
     'date'?: number;
     'contentLength'?: number;
-    'origin'?: string;
-    'contentType'?: MediaType;
-    'range'?: Array<object>;
-    'allow'?: Set<object>;
-    'contentLanguage'?: ErrorResponseHeadersContentLanguage;
-    'cacheControl'?: string;
-    'bearerAuth'?: string;
-    'etag'?: string;
     'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'basicAuth'?: string;
     'accept'?: Array<MediaType>;
-    'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
+    'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersAcceptLanguageAsLocalesInner>;
     'acceptPatch'?: Array<MediaType>;
     'accessControlAllowCredentials'?: boolean;
     'accessControlAllowHeaders'?: Array<string>;
@@ -168,20 +160,24 @@ export interface ErrorResponseHeaders {
     'accessControlMaxAge'?: number;
     'accessControlRequestHeaders'?: Array<string>;
     'accessControlRequestMethod'?: object;
+    'allow'?: Set<object>;
+    'etag'?: string;
     'expires'?: number;
     'ifMatch'?: Array<string>;
     'ifNoneMatch'?: Array<string>;
     'ifUnmodifiedSince'?: number;
     'pragma'?: string;
+    'range'?: Array<object>;
     'upgrade'?: string;
     'vary'?: Array<string>;
+    'origin'?: string;
+    'contentType'?: MediaType;
+    'contentLanguage'?: ErrorResponseHeadersAcceptLanguageAsLocalesInner;
+    'bearerAuth'?: string;
+    'cacheControl'?: string;
     'ifModifiedSince'?: number;
 }
-export interface ErrorResponseHeadersAcceptLanguageInner {
-    'range'?: string;
-    'weight'?: number;
-}
-export interface ErrorResponseHeadersContentLanguage {
+export interface ErrorResponseHeadersAcceptLanguageAsLocalesInner {
     'language'?: string;
     'displayName'?: string;
     'country'?: string;
@@ -196,6 +192,10 @@ export interface ErrorResponseHeadersContentLanguage {
     'extensionKeys'?: Set<string>;
     'iso3Language'?: string;
     'iso3Country'?: string;
+}
+export interface ErrorResponseHeadersAcceptLanguageInner {
+    'range'?: string;
+    'weight'?: number;
 }
 export interface ErrorResponseHeadersHost {
     'hostString'?: string;
@@ -260,8 +260,8 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalElements'?: number;
     'totalPages'?: number;
+    'totalElements'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
