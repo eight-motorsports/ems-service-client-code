@@ -137,7 +137,6 @@ export interface ErrorResponse {
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
-    'connection'?: Array<string>;
     'contentDisposition'?: ContentDisposition;
     'acceptCharset'?: Array<string>;
     'location'?: string;
@@ -147,10 +146,19 @@ export interface ErrorResponseHeaders {
     'lastModified'?: number;
     'date'?: number;
     'contentLength'?: number;
+    'origin'?: string;
+    'contentType'?: MediaType;
+    'range'?: Array<object>;
+    'connection'?: Array<string>;
+    'contentLanguage'?: ErrorResponseHeadersContentLanguage;
+    'allow'?: Set<object>;
+    'bearerAuth'?: string;
+    'cacheControl'?: string;
+    'etag'?: string;
     'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'basicAuth'?: string;
     'accept'?: Array<MediaType>;
-    'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersAcceptLanguageAsLocalesInner>;
+    'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
     'acceptPatch'?: Array<MediaType>;
     'accessControlAllowCredentials'?: boolean;
     'accessControlAllowHeaders'?: Array<string>;
@@ -160,24 +168,20 @@ export interface ErrorResponseHeaders {
     'accessControlMaxAge'?: number;
     'accessControlRequestHeaders'?: Array<string>;
     'accessControlRequestMethod'?: object;
-    'allow'?: Set<object>;
-    'etag'?: string;
     'expires'?: number;
     'ifMatch'?: Array<string>;
     'ifNoneMatch'?: Array<string>;
     'ifUnmodifiedSince'?: number;
     'pragma'?: string;
-    'range'?: Array<object>;
     'upgrade'?: string;
     'vary'?: Array<string>;
-    'origin'?: string;
-    'contentType'?: MediaType;
-    'contentLanguage'?: ErrorResponseHeadersAcceptLanguageAsLocalesInner;
-    'bearerAuth'?: string;
-    'cacheControl'?: string;
     'ifModifiedSince'?: number;
 }
-export interface ErrorResponseHeadersAcceptLanguageAsLocalesInner {
+export interface ErrorResponseHeadersAcceptLanguageInner {
+    'range'?: string;
+    'weight'?: number;
+}
+export interface ErrorResponseHeadersContentLanguage {
     'language'?: string;
     'displayName'?: string;
     'country'?: string;
@@ -192,10 +196,6 @@ export interface ErrorResponseHeadersAcceptLanguageAsLocalesInner {
     'extensionKeys'?: Set<string>;
     'iso3Language'?: string;
     'iso3Country'?: string;
-}
-export interface ErrorResponseHeadersAcceptLanguageInner {
-    'range'?: string;
-    'weight'?: number;
 }
 export interface ErrorResponseHeadersHost {
     'hostString'?: string;
@@ -904,7 +904,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
                 localVarFormParams.append('manual', manual as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1960,7 +1960,7 @@ export const PartsBikeControllerApiAxiosParamCreator = function (configuration?:
                 localVarFormParams.append('picture', picture as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
