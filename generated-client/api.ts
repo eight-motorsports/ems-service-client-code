@@ -198,11 +198,11 @@ export interface ErrorResponseHeadersContentLanguage {
     'iso3Country'?: string;
 }
 export interface ErrorResponseHeadersHost {
-    'hostString'?: string;
     'address'?: ErrorResponseHeadersHostAddress;
     'port'?: number;
     'unresolved'?: boolean;
     'hostName'?: string;
+    'hostString'?: string;
 }
 export interface ErrorResponseHeadersHostAddress {
     'hostAddress'?: string;
@@ -247,9 +247,9 @@ export interface MediaType {
     'subtype'?: string;
     'parameters'?: { [key: string]: string; };
     'qualityValue'?: number;
+    'subtypeSuffix'?: string;
     'wildcardType'?: boolean;
     'wildcardSubtype'?: boolean;
-    'subtypeSuffix'?: string;
     'charset'?: string;
     'concrete'?: boolean;
 }
@@ -500,7 +500,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
             // authentication LicenseKey required
             await setApiKeyToObject(localVarHeaderParameter, "X-License-Key", configuration)
 
-            localVarHeaderParameter['Accept'] = 'text/csv,application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
