@@ -57,9 +57,9 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-|**200** | Parts bike deleted successfully |  -  |
 |**400** | Parts bike does not exist |  -  |
 |**401** | Missing or invalid license key |  -  |
+|**200** | Parts bike deleted successfully |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -110,9 +110,9 @@ const { status, data } = await apiInstance.getPartsBikeDetails(
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+|**200** | Parts bike details retrieved successfully |  -  |
 |**400** | Parts bike does not exist |  -  |
 |**401** | Missing or invalid license key |  -  |
-|**200** | Parts bike details retrieved successfully |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -164,9 +164,9 @@ const { status, data } = await apiInstance.savePartsBike(
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+|**200** | Parts bike saved successfully |  -  |
 |**400** | Invalid parts bike data or referenced bike variant does not exist |  -  |
 |**401** | Missing or invalid license key |  -  |
-|**200** | Parts bike saved successfully |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -272,8 +272,8 @@ const { status, data } = await apiInstance.uploadPartsBikeImage(
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**200** | Image uploaded successfully |  -  |
-|**400** | Invalid image file or unsupported file type |  -  |
 |**401** | Missing or invalid license key |  -  |
+|**400** | Invalid image file or unsupported file type |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
