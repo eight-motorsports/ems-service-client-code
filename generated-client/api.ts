@@ -137,7 +137,6 @@ export interface ErrorResponse {
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
-    'connection'?: Array<string>;
     'contentDisposition'?: ContentDisposition;
     'acceptCharset'?: Array<string>;
     'location'?: string;
@@ -147,19 +146,20 @@ export interface ErrorResponseHeaders {
     'lastModified'?: number;
     'date'?: number;
     'contentLength'?: number;
+    'cacheControl'?: string;
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
-    'contentLanguage'?: ErrorResponseHeadersContentLanguage;
-    'allow'?: Set<object>;
-    'bearerAuth'?: string;
-    'cacheControl'?: string;
-    'etag'?: string;
     'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'basicAuth'?: string;
     'accept'?: Array<MediaType>;
-    'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
+    'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersAcceptLanguageAsLocalesInner>;
     'acceptPatch'?: Array<MediaType>;
+    'connection'?: Array<string>;
+    'contentLanguage'?: ErrorResponseHeadersAcceptLanguageAsLocalesInner;
+    'allow'?: Set<object>;
+    'bearerAuth'?: string;
+    'etag'?: string;
     'accessControlAllowCredentials'?: boolean;
     'accessControlAllowHeaders'?: Array<string>;
     'accessControlAllowMethods'?: Array<object>;
@@ -177,11 +177,7 @@ export interface ErrorResponseHeaders {
     'vary'?: Array<string>;
     'ifModifiedSince'?: number;
 }
-export interface ErrorResponseHeadersAcceptLanguageInner {
-    'range'?: string;
-    'weight'?: number;
-}
-export interface ErrorResponseHeadersContentLanguage {
+export interface ErrorResponseHeadersAcceptLanguageAsLocalesInner {
     'language'?: string;
     'displayName'?: string;
     'country'?: string;
@@ -196,6 +192,10 @@ export interface ErrorResponseHeadersContentLanguage {
     'extensionKeys'?: Set<string>;
     'iso3Language'?: string;
     'iso3Country'?: string;
+}
+export interface ErrorResponseHeadersAcceptLanguageInner {
+    'range'?: string;
+    'weight'?: number;
 }
 export interface ErrorResponseHeadersHost {
     'hostString'?: string;
@@ -500,7 +500,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
             // authentication LicenseKey required
             await setApiKeyToObject(localVarHeaderParameter, "X-License-Key", configuration)
 
-            localVarHeaderParameter['Accept'] = 'text/csv,application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -904,7 +904,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
                 localVarFormParams.append('manual', manual as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
