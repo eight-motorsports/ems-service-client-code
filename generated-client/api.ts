@@ -127,17 +127,16 @@ export interface EbayToken {
 }
 export interface ErrorResponse {
     'body'?: ProblemDetail;
-    'headers'?: ErrorResponseHeaders;
     'statusCode'?: HttpStatusCode;
     'detailMessageArguments'?: Array<object>;
     'typeMessageCode'?: string;
     'detailMessageCode'?: string;
     'titleMessageCode'?: string;
+    'headers'?: ErrorResponseHeaders;
 }
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
-    'connection'?: Array<string>;
     'contentDisposition'?: ContentDisposition;
     'acceptCharset'?: Array<string>;
     'location'?: string;
@@ -147,12 +146,12 @@ export interface ErrorResponseHeaders {
     'lastModified'?: number;
     'date'?: number;
     'contentLength'?: number;
-    'contentType'?: MediaType;
-    'ifModifiedSince'?: number;
     'origin'?: string;
+    'contentType'?: MediaType;
     'range'?: Array<object>;
-    'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
+    'connection'?: Array<string>;
+    'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'bearerAuth'?: string;
     'cacheControl'?: string;
     'etag'?: string;
@@ -176,6 +175,7 @@ export interface ErrorResponseHeaders {
     'pragma'?: string;
     'upgrade'?: string;
     'vary'?: Array<string>;
+    'ifModifiedSince'?: number;
 }
 export interface ErrorResponseHeadersAcceptLanguageInner {
     'range'?: string;
@@ -267,9 +267,9 @@ export interface Page {
     'content'?: Array<object>;
     'number'?: number;
     'sort'?: SortObject;
+    'numberOfElements'?: number;
     'first'?: boolean;
     'last'?: boolean;
-    'numberOfElements'?: number;
     'empty'?: boolean;
 }
 export interface PageableObject {
@@ -500,7 +500,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
             // authentication LicenseKey required
             await setApiKeyToObject(localVarHeaderParameter, "X-License-Key", configuration)
 
-            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
+            localVarHeaderParameter['Accept'] = 'text/csv,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
