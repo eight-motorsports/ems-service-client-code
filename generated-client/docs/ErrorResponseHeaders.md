@@ -31,9 +31,9 @@ Name | Type | Description | Notes
 **accessControlAllowCredentials** | **boolean** |  | [optional] [default to undefined]
 **accessControlAllowHeaders** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **accessControlAllowMethods** | **Array&lt;object&gt;** |  | [optional] [default to undefined]
+**accessControlMaxAge** | **number** |  | [optional] [default to undefined]
 **accessControlAllowOrigin** | **string** |  | [optional] [default to undefined]
 **accessControlExposeHeaders** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
-**accessControlMaxAge** | **number** |  | [optional] [default to undefined]
 **accessControlRequestHeaders** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **accessControlRequestMethod** | **object** |  | [optional] [default to undefined]
 **expires** | **number** |  | [optional] [default to undefined]
@@ -77,9 +77,9 @@ const instance: ErrorResponseHeaders = {
     accessControlAllowCredentials,
     accessControlAllowHeaders,
     accessControlAllowMethods,
+    accessControlMaxAge,
     accessControlAllowOrigin,
     accessControlExposeHeaders,
-    accessControlMaxAge,
     accessControlRequestHeaders,
     accessControlRequestMethod,
     expires,
