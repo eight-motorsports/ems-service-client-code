@@ -127,19 +127,20 @@ export interface EbayToken {
 }
 export interface ErrorResponse {
     'body'?: ProblemDetail;
-    'statusCode'?: HttpStatusCode;
     'detailMessageArguments'?: Array<object>;
     'typeMessageCode'?: string;
     'detailMessageCode'?: string;
     'titleMessageCode'?: string;
+    'statusCode'?: HttpStatusCode;
     'headers'?: ErrorResponseHeaders;
 }
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
+    'connection'?: Array<string>;
+    'location'?: string;
     'contentDisposition'?: ContentDisposition;
     'acceptCharset'?: Array<string>;
-    'location'?: string;
     'empty'?: boolean;
     'host'?: ErrorResponseHeadersHost;
     'all'?: { [key: string]: string; };
@@ -147,10 +148,9 @@ export interface ErrorResponseHeaders {
     'date'?: number;
     'contentLength'?: number;
     'origin'?: string;
+    'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'contentType'?: MediaType;
     'range'?: Array<object>;
-    'connection'?: Array<string>;
-    'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
     'bearerAuth'?: string;
     'cacheControl'?: string;
@@ -163,9 +163,9 @@ export interface ErrorResponseHeaders {
     'accessControlAllowCredentials'?: boolean;
     'accessControlAllowHeaders'?: Array<string>;
     'accessControlAllowMethods'?: Array<object>;
-    'accessControlMaxAge'?: number;
     'accessControlAllowOrigin'?: string;
     'accessControlExposeHeaders'?: Array<string>;
+    'accessControlMaxAge'?: number;
     'accessControlRequestHeaders'?: Array<string>;
     'accessControlRequestMethod'?: object;
     'expires'?: number;
@@ -260,8 +260,8 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalElements'?: number;
     'totalPages'?: number;
+    'totalElements'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
@@ -904,7 +904,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
                 localVarFormParams.append('manual', manual as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1960,7 +1960,7 @@ export const PartsBikeControllerApiAxiosParamCreator = function (configuration?:
                 localVarFormParams.append('picture', picture as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
