@@ -22,9 +22,10 @@ Name | Type | Description | Notes
 **allow** | **Set&lt;object&gt;** |  | [optional] [default to undefined]
 **bearerAuth** | **string** |  | [optional] [default to undefined]
 **cacheControl** | **string** |  | [optional] [default to undefined]
-**acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
-**basicAuth** | **string** |  | [optional] [default to undefined]
 **etag** | **string** |  | [optional] [default to undefined]
+**upgrade** | **string** |  | [optional] [default to undefined]
+**vary** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
+**basicAuth** | **string** |  | [optional] [default to undefined]
 **accept** | [**Array&lt;MediaType&gt;**](MediaType.md) |  | [optional] [default to undefined]
 **acceptLanguageAsLocales** | [**Array&lt;ErrorResponseHeadersContentLanguage&gt;**](ErrorResponseHeadersContentLanguage.md) |  | [optional] [default to undefined]
 **acceptPatch** | [**Array&lt;MediaType&gt;**](MediaType.md) |  | [optional] [default to undefined]
@@ -41,8 +42,7 @@ Name | Type | Description | Notes
 **ifNoneMatch** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **ifUnmodifiedSince** | **number** |  | [optional] [default to undefined]
 **pragma** | **string** |  | [optional] [default to undefined]
-**upgrade** | **string** |  | [optional] [default to undefined]
-**vary** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
+**acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
 **ifModifiedSince** | **number** |  | [optional] [default to undefined]
 
 ## Example
@@ -68,9 +68,10 @@ const instance: ErrorResponseHeaders = {
     allow,
     bearerAuth,
     cacheControl,
-    acceptLanguage,
-    basicAuth,
     etag,
+    upgrade,
+    vary,
+    basicAuth,
     accept,
     acceptLanguageAsLocales,
     acceptPatch,
@@ -87,8 +88,7 @@ const instance: ErrorResponseHeaders = {
     ifNoneMatch,
     ifUnmodifiedSince,
     pragma,
-    upgrade,
-    vary,
+    acceptLanguage,
     ifModifiedSince,
 };
 ```
