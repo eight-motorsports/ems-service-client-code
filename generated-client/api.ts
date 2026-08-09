@@ -155,6 +155,13 @@ export interface ErrorResponseHeaders {
     'bearerAuth'?: string;
     'cacheControl'?: string;
     'etag'?: string;
+    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
+    'basicAuth'?: string;
+    'accept'?: Array<MediaType>;
+    'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
+    'acceptPatch'?: Array<MediaType>;
+    'accessControlAllowCredentials'?: boolean;
+    'accessControlAllowHeaders'?: Array<string>;
     'accessControlAllowMethods'?: Array<object>;
     'accessControlAllowOrigin'?: string;
     'accessControlExposeHeaders'?: Array<string>;
@@ -168,13 +175,6 @@ export interface ErrorResponseHeaders {
     'pragma'?: string;
     'upgrade'?: string;
     'vary'?: Array<string>;
-    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
-    'basicAuth'?: string;
-    'accept'?: Array<MediaType>;
-    'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
-    'acceptPatch'?: Array<MediaType>;
-    'accessControlAllowCredentials'?: boolean;
-    'accessControlAllowHeaders'?: Array<string>;
     'ifModifiedSince'?: number;
 }
 export interface ErrorResponseHeadersAcceptLanguageInner {
@@ -904,7 +904,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
                 localVarFormParams.append('manual', manual as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1960,7 +1960,7 @@ export const PartsBikeControllerApiAxiosParamCreator = function (configuration?:
                 localVarFormParams.append('picture', picture as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
