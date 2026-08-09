@@ -420,8 +420,8 @@ const { status, data } = await apiInstance.importBikeVariants(
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**401** | Missing or invalid license key |  -  |
-|**400** | Invalid CSV file or import failure |  -  |
 |**200** | Bike variants imported successfully |  -  |
+|**400** | Invalid CSV file or import failure |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -473,8 +473,8 @@ const { status, data } = await apiInstance.saveBikeVariant(
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-|**200** | Bike variant saved successfully |  -  |
 |**401** | Missing or invalid license key |  -  |
+|**200** | Bike variant saved successfully |  -  |
 |**400** | Invalid bike variant payload |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -528,8 +528,8 @@ const { status, data } = await apiInstance.searchBikeVariant(
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**401** | Missing or invalid license key |  -  |
-|**200** | Bike variants returned successfully |  -  |
 |**400** | Invalid search payload |  -  |
+|**200** | Bike variants returned successfully |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
