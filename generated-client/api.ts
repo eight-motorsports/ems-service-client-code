@@ -127,11 +127,11 @@ export interface EbayToken {
 }
 export interface ErrorResponse {
     'body'?: ProblemDetail;
-    'statusCode'?: HttpStatusCode;
     'detailMessageArguments'?: Array<object>;
     'typeMessageCode'?: string;
     'detailMessageCode'?: string;
     'titleMessageCode'?: string;
+    'statusCode'?: HttpStatusCode;
     'headers'?: ErrorResponseHeaders;
 }
 export interface ErrorResponseHeaders {
@@ -155,6 +155,7 @@ export interface ErrorResponseHeaders {
     'bearerAuth'?: string;
     'cacheControl'?: string;
     'etag'?: string;
+    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'basicAuth'?: string;
     'accept'?: Array<MediaType>;
     'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
@@ -174,7 +175,6 @@ export interface ErrorResponseHeaders {
     'pragma'?: string;
     'upgrade'?: string;
     'vary'?: Array<string>;
-    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'ifModifiedSince'?: number;
 }
 export interface ErrorResponseHeadersAcceptLanguageInner {
