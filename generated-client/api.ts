@@ -113,9 +113,9 @@ export interface ContentDisposition {
      * @deprecated
      */
     'readDate'?: string;
-    'inline'?: boolean;
     'attachment'?: boolean;
     'formData'?: boolean;
+    'inline'?: boolean;
 }
 export interface EbayToken {
     'id'?: number;
@@ -155,13 +155,7 @@ export interface ErrorResponseHeaders {
     'bearerAuth'?: string;
     'cacheControl'?: string;
     'etag'?: string;
-    'expires'?: number;
-    'ifMatch'?: Array<string>;
-    'ifNoneMatch'?: Array<string>;
-    'ifUnmodifiedSince'?: number;
-    'pragma'?: string;
-    'upgrade'?: string;
-    'vary'?: Array<string>;
+    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'basicAuth'?: string;
     'accept'?: Array<MediaType>;
     'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
@@ -174,7 +168,13 @@ export interface ErrorResponseHeaders {
     'accessControlMaxAge'?: number;
     'accessControlRequestHeaders'?: Array<string>;
     'accessControlRequestMethod'?: object;
-    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
+    'expires'?: number;
+    'ifMatch'?: Array<string>;
+    'ifNoneMatch'?: Array<string>;
+    'ifUnmodifiedSince'?: number;
+    'pragma'?: string;
+    'upgrade'?: string;
+    'vary'?: Array<string>;
     'ifModifiedSince'?: number;
 }
 export interface ErrorResponseHeadersAcceptLanguageInner {
@@ -500,7 +500,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
             // authentication LicenseKey required
             await setApiKeyToObject(localVarHeaderParameter, "X-License-Key", configuration)
 
-            localVarHeaderParameter['Accept'] = 'text/csv,application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -904,7 +904,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
                 localVarFormParams.append('manual', manual as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1960,7 +1960,7 @@ export const PartsBikeControllerApiAxiosParamCreator = function (configuration?:
                 localVarFormParams.append('picture', picture as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
