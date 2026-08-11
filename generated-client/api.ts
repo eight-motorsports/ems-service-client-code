@@ -127,11 +127,11 @@ export interface EbayToken {
 }
 export interface ErrorResponse {
     'body'?: ProblemDetail;
+    'statusCode'?: HttpStatusCode;
     'detailMessageArguments'?: Array<object>;
     'typeMessageCode'?: string;
     'detailMessageCode'?: string;
     'titleMessageCode'?: string;
-    'statusCode'?: HttpStatusCode;
     'headers'?: ErrorResponseHeaders;
 }
 export interface ErrorResponseHeaders {
@@ -149,9 +149,9 @@ export interface ErrorResponseHeaders {
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
+    'allow'?: Set<object>;
     'connection'?: Array<string>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
-    'allow'?: Set<object>;
     'bearerAuth'?: string;
     'cacheControl'?: string;
     'etag'?: string;
@@ -500,7 +500,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
             // authentication LicenseKey required
             await setApiKeyToObject(localVarHeaderParameter, "X-License-Key", configuration)
 
-            localVarHeaderParameter['Accept'] = 'text/csv,application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -904,7 +904,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
                 localVarFormParams.append('manual', manual as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
