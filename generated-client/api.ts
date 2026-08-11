@@ -148,13 +148,15 @@ export interface ErrorResponseHeaders {
     'date'?: number;
     'contentLength'?: number;
     'origin'?: string;
+    'cacheControl'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
-    'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
+    'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'bearerAuth'?: string;
-    'cacheControl'?: string;
     'etag'?: string;
+    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
+    'basicAuth'?: string;
     'accept'?: Array<MediaType>;
     'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
     'acceptPatch'?: Array<MediaType>;
@@ -172,8 +174,6 @@ export interface ErrorResponseHeaders {
     'ifUnmodifiedSince'?: number;
     'pragma'?: string;
     'upgrade'?: string;
-    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
-    'basicAuth'?: string;
     'vary'?: Array<string>;
     'ifModifiedSince'?: number;
 }
@@ -260,8 +260,8 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalElements'?: number;
     'totalPages'?: number;
+    'totalElements'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
