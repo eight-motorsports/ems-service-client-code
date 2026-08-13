@@ -147,13 +147,13 @@ export interface ErrorResponseHeaders {
     'lastModified'?: number;
     'date'?: number;
     'contentLength'?: number;
+    'cacheControl'?: string;
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
     'bearerAuth'?: string;
-    'cacheControl'?: string;
     'etag'?: string;
     'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'basicAuth'?: string;
@@ -198,11 +198,11 @@ export interface ErrorResponseHeadersContentLanguage {
     'iso3Country'?: string;
 }
 export interface ErrorResponseHeadersHost {
-    'hostString'?: string;
     'address'?: ErrorResponseHeadersHostAddress;
     'port'?: number;
     'unresolved'?: boolean;
     'hostName'?: string;
+    'hostString'?: string;
 }
 export interface ErrorResponseHeadersHostAddress {
     'hostAddress'?: string;
@@ -904,7 +904,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
                 localVarFormParams.append('manual', manual as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1960,7 +1960,7 @@ export const PartsBikeControllerApiAxiosParamCreator = function (configuration?:
                 localVarFormParams.append('picture', picture as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
