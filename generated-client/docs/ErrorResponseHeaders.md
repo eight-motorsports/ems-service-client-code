@@ -22,8 +22,8 @@ Name | Type | Description | Notes
 **allow** | **Set&lt;object&gt;** |  | [optional] [default to undefined]
 **bearerAuth** | **string** |  | [optional] [default to undefined]
 **cacheControl** | **string** |  | [optional] [default to undefined]
-**acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
 **etag** | **string** |  | [optional] [default to undefined]
+**acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
 **basicAuth** | **string** |  | [optional] [default to undefined]
 **accept** | [**Array&lt;MediaType&gt;**](MediaType.md) |  | [optional] [default to undefined]
 **acceptLanguageAsLocales** | [**Array&lt;ErrorResponseHeadersContentLanguage&gt;**](ErrorResponseHeadersContentLanguage.md) |  | [optional] [default to undefined]
@@ -68,8 +68,8 @@ const instance: ErrorResponseHeaders = {
     allow,
     bearerAuth,
     cacheControl,
-    acceptLanguage,
     etag,
+    acceptLanguage,
     basicAuth,
     accept,
     acceptLanguageAsLocales,
