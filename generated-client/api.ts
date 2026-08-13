@@ -137,6 +137,7 @@ export interface ErrorResponse {
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
+    'connection'?: Array<string>;
     'contentDisposition'?: ContentDisposition;
     'acceptCharset'?: Array<string>;
     'location'?: string;
@@ -147,9 +148,14 @@ export interface ErrorResponseHeaders {
     'date'?: number;
     'contentLength'?: number;
     'origin'?: string;
-    'contentType'?: MediaType;
+    'ifMatch'?: Array<string>;
+    'ifNoneMatch'?: Array<string>;
+    'ifUnmodifiedSince'?: number;
+    'pragma'?: string;
     'range'?: Array<object>;
-    'connection'?: Array<string>;
+    'upgrade'?: string;
+    'vary'?: Array<string>;
+    'contentType'?: MediaType;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
     'bearerAuth'?: string;
@@ -169,12 +175,6 @@ export interface ErrorResponseHeaders {
     'accessControlRequestHeaders'?: Array<string>;
     'accessControlRequestMethod'?: object;
     'expires'?: number;
-    'ifMatch'?: Array<string>;
-    'ifNoneMatch'?: Array<string>;
-    'ifUnmodifiedSince'?: number;
-    'pragma'?: string;
-    'upgrade'?: string;
-    'vary'?: Array<string>;
     'ifModifiedSince'?: number;
 }
 export interface ErrorResponseHeadersAcceptLanguageInner {
@@ -260,8 +260,8 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalPages'?: number;
     'totalElements'?: number;
+    'totalPages'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
@@ -500,7 +500,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
             // authentication LicenseKey required
             await setApiKeyToObject(localVarHeaderParameter, "X-License-Key", configuration)
 
-            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
+            localVarHeaderParameter['Accept'] = 'text/csv,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
