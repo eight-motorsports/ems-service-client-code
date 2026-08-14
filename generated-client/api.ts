@@ -137,7 +137,6 @@ export interface ErrorResponse {
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
-    'connection'?: Array<string>;
     'contentDisposition'?: ContentDisposition;
     'acceptCharset'?: Array<string>;
     'location'?: string;
@@ -151,10 +150,12 @@ export interface ErrorResponseHeaders {
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
+    'connection'?: Array<string>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
     'bearerAuth'?: string;
     'etag'?: string;
+    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'basicAuth'?: string;
     'accept'?: Array<MediaType>;
     'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
@@ -172,7 +173,6 @@ export interface ErrorResponseHeaders {
     'ifNoneMatch'?: Array<string>;
     'ifUnmodifiedSince'?: number;
     'pragma'?: string;
-    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'upgrade'?: string;
     'vary'?: Array<string>;
     'ifModifiedSince'?: number;
@@ -500,7 +500,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
             // authentication LicenseKey required
             await setApiKeyToObject(localVarHeaderParameter, "X-License-Key", configuration)
 
-            localVarHeaderParameter['Accept'] = 'text/csv,application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
