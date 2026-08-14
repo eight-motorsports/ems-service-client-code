@@ -147,15 +147,14 @@ export interface ErrorResponseHeaders {
     'lastModified'?: number;
     'date'?: number;
     'contentLength'?: number;
+    'cacheControl'?: string;
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
     'bearerAuth'?: string;
-    'cacheControl'?: string;
     'etag'?: string;
-    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'basicAuth'?: string;
     'accept'?: Array<MediaType>;
     'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
@@ -173,6 +172,7 @@ export interface ErrorResponseHeaders {
     'ifNoneMatch'?: Array<string>;
     'ifUnmodifiedSince'?: number;
     'pragma'?: string;
+    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'upgrade'?: string;
     'vary'?: Array<string>;
     'ifModifiedSince'?: number;
