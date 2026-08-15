@@ -34,8 +34,6 @@ Name | Type | Description | Notes
 **accessControlMaxAge** | **number** |  | [optional] [default to undefined]
 **accessControlRequestHeaders** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **accessControlRequestMethod** | **object** |  | [optional] [default to undefined]
-**acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
-**basicAuth** | **string** |  | [optional] [default to undefined]
 **expires** | **number** |  | [optional] [default to undefined]
 **ifMatch** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **ifNoneMatch** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
@@ -43,6 +41,8 @@ Name | Type | Description | Notes
 **pragma** | **string** |  | [optional] [default to undefined]
 **upgrade** | **string** |  | [optional] [default to undefined]
 **vary** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
+**acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
+**basicAuth** | **string** |  | [optional] [default to undefined]
 **ifModifiedSince** | **number** |  | [optional] [default to undefined]
 
 ## Example
@@ -80,8 +80,6 @@ const instance: ErrorResponseHeaders = {
     accessControlMaxAge,
     accessControlRequestHeaders,
     accessControlRequestMethod,
-    acceptLanguage,
-    basicAuth,
     expires,
     ifMatch,
     ifNoneMatch,
@@ -89,6 +87,8 @@ const instance: ErrorResponseHeaders = {
     pragma,
     upgrade,
     vary,
+    acceptLanguage,
+    basicAuth,
     ifModifiedSince,
 };
 ```
