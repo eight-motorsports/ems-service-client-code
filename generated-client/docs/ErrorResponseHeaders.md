@@ -15,14 +15,13 @@ Name | Type | Description | Notes
 **lastModified** | **number** |  | [optional] [default to undefined]
 **date** | **number** |  | [optional] [default to undefined]
 **contentLength** | **number** |  | [optional] [default to undefined]
-**contentType** | [**MediaType**](MediaType.md) |  | [optional] [default to undefined]
-**ifModifiedSince** | **number** |  | [optional] [default to undefined]
-**cacheControl** | **string** |  | [optional] [default to undefined]
 **origin** | **string** |  | [optional] [default to undefined]
+**contentType** | [**MediaType**](MediaType.md) |  | [optional] [default to undefined]
 **range** | **Array&lt;object&gt;** |  | [optional] [default to undefined]
 **contentLanguage** | [**ErrorResponseHeadersContentLanguage**](ErrorResponseHeadersContentLanguage.md) |  | [optional] [default to undefined]
 **allow** | **Set&lt;object&gt;** |  | [optional] [default to undefined]
 **bearerAuth** | **string** |  | [optional] [default to undefined]
+**cacheControl** | **string** |  | [optional] [default to undefined]
 **etag** | **string** |  | [optional] [default to undefined]
 **acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
 **basicAuth** | **string** |  | [optional] [default to undefined]
@@ -44,6 +43,7 @@ Name | Type | Description | Notes
 **pragma** | **string** |  | [optional] [default to undefined]
 **upgrade** | **string** |  | [optional] [default to undefined]
 **vary** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
+**ifModifiedSince** | **number** |  | [optional] [default to undefined]
 
 ## Example
 
@@ -61,14 +61,13 @@ const instance: ErrorResponseHeaders = {
     lastModified,
     date,
     contentLength,
-    contentType,
-    ifModifiedSince,
-    cacheControl,
     origin,
+    contentType,
     range,
     contentLanguage,
     allow,
     bearerAuth,
+    cacheControl,
     etag,
     acceptLanguage,
     basicAuth,
@@ -90,6 +89,7 @@ const instance: ErrorResponseHeaders = {
     pragma,
     upgrade,
     vary,
+    ifModifiedSince,
 };
 ```
 
