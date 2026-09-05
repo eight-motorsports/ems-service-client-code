@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**connection** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **contentDisposition** | [**ContentDisposition**](ContentDisposition.md) |  | [optional] [default to undefined]
 **acceptCharset** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **location** | **string** |  | [optional] [default to undefined]
+**connection** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **empty** | **boolean** |  | [optional] [default to undefined]
 **host** | [**ErrorResponseHeadersHost**](ErrorResponseHeadersHost.md) |  | [optional] [default to undefined]
 **all** | **{ [key: string]: string; }** |  | [optional] [default to undefined]
@@ -51,10 +51,10 @@ Name | Type | Description | Notes
 import { ErrorResponseHeaders } from './api';
 
 const instance: ErrorResponseHeaders = {
-    connection,
     contentDisposition,
     acceptCharset,
     location,
+    connection,
     empty,
     host,
     all,
