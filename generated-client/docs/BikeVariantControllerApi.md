@@ -104,15 +104,15 @@ This endpoint does not have any parameters.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/csv, application/json
+ - **Accept**: application/json, text/csv
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**401** | Missing or invalid license key |  -  |
-|**200** | Bike variants exported successfully |  -  |
 |**400** | Export failure |  -  |
+|**200** | Bike variants exported successfully |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -366,8 +366,8 @@ const { status, data } = await apiInstance.getVariants(
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-|**200** | Variants returned successfully |  -  |
 |**401** | Missing or invalid license key |  -  |
+|**200** | Variants returned successfully |  -  |
 |**400** | Invalid model id or missing year |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -528,8 +528,8 @@ const { status, data } = await apiInstance.searchBikeVariant(
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**401** | Missing or invalid license key |  -  |
-|**200** | Bike variants returned successfully |  -  |
 |**400** | Invalid search payload |  -  |
+|**200** | Bike variants returned successfully |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -584,8 +584,8 @@ const { status, data } = await apiInstance.searchModels(
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**401** | Missing or invalid license key |  -  |
-|**200** | Makes returned successfully |  -  |
 |**400** | Invalid or missing field |  -  |
+|**200** | Makes returned successfully |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -633,15 +633,15 @@ const { status, data } = await apiInstance.uploadManual(
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: text/plain, application/json
+ - **Accept**: application/json, text/plain
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 |**401** | Missing or invalid license key |  -  |
-|**200** | Service manual uploaded successfully |  -  |
 |**400** | Invalid bike variant id, missing file, or invalid file type |  -  |
+|**200** | Service manual uploaded successfully |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
