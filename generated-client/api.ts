@@ -155,8 +155,6 @@ export interface ErrorResponseHeaders {
     'bearerAuth'?: string;
     'cacheControl'?: string;
     'etag'?: string;
-    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
-    'basicAuth'?: string;
     'accept'?: Array<MediaType>;
     'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
     'acceptPatch'?: Array<MediaType>;
@@ -168,6 +166,8 @@ export interface ErrorResponseHeaders {
     'accessControlMaxAge'?: number;
     'accessControlRequestHeaders'?: Array<string>;
     'accessControlRequestMethod'?: object;
+    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
+    'basicAuth'?: string;
     'expires'?: number;
     'ifMatch'?: Array<string>;
     'ifNoneMatch'?: Array<string>;
@@ -500,7 +500,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
             // authentication LicenseKey required
             await setApiKeyToObject(localVarHeaderParameter, "X-License-Key", configuration)
 
-            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
+            localVarHeaderParameter['Accept'] = 'text/csv,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
