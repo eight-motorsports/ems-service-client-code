@@ -147,10 +147,10 @@ export interface ErrorResponseHeaders {
     'lastModified'?: number;
     'date'?: number;
     'contentLength'?: number;
+    'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
-    'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
     'bearerAuth'?: string;
     'cacheControl'?: string;
@@ -198,11 +198,11 @@ export interface ErrorResponseHeadersContentLanguage {
     'iso3Country'?: string;
 }
 export interface ErrorResponseHeadersHost {
+    'hostString'?: string;
     'address'?: ErrorResponseHeadersHostAddress;
     'port'?: number;
     'unresolved'?: boolean;
     'hostName'?: string;
-    'hostString'?: string;
 }
 export interface ErrorResponseHeadersHostAddress {
     'hostAddress'?: string;
