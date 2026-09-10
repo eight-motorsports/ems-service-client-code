@@ -155,6 +155,8 @@ export interface ErrorResponseHeaders {
     'bearerAuth'?: string;
     'cacheControl'?: string;
     'etag'?: string;
+    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
+    'basicAuth'?: string;
     'accept'?: Array<MediaType>;
     'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
     'acceptPatch'?: Array<MediaType>;
@@ -169,10 +171,8 @@ export interface ErrorResponseHeaders {
     'expires'?: number;
     'ifMatch'?: Array<string>;
     'ifNoneMatch'?: Array<string>;
-    'pragma'?: string;
-    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
-    'basicAuth'?: string;
     'ifUnmodifiedSince'?: number;
+    'pragma'?: string;
     'upgrade'?: string;
     'vary'?: Array<string>;
     'ifModifiedSince'?: number;
@@ -198,11 +198,11 @@ export interface ErrorResponseHeadersContentLanguage {
     'iso3Country'?: string;
 }
 export interface ErrorResponseHeadersHost {
+    'hostString'?: string;
     'address'?: ErrorResponseHeadersHostAddress;
     'port'?: number;
     'unresolved'?: boolean;
     'hostName'?: string;
-    'hostString'?: string;
 }
 export interface ErrorResponseHeadersHostAddress {
     'hostAddress'?: string;
@@ -260,8 +260,8 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalElements'?: number;
     'totalPages'?: number;
+    'totalElements'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
@@ -500,7 +500,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
             // authentication LicenseKey required
             await setApiKeyToObject(localVarHeaderParameter, "X-License-Key", configuration)
 
-            localVarHeaderParameter['Accept'] = 'application/json,text/csv';
+            localVarHeaderParameter['Accept'] = 'text/csv,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
