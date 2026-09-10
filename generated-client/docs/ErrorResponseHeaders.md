@@ -39,8 +39,8 @@ Name | Type | Description | Notes
 **expires** | **number** |  | [optional] [default to undefined]
 **ifMatch** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **ifNoneMatch** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
-**pragma** | **string** |  | [optional] [default to undefined]
 **ifUnmodifiedSince** | **number** |  | [optional] [default to undefined]
+**pragma** | **string** |  | [optional] [default to undefined]
 **upgrade** | **string** |  | [optional] [default to undefined]
 **vary** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **ifModifiedSince** | **number** |  | [optional] [default to undefined]
@@ -85,8 +85,8 @@ const instance: ErrorResponseHeaders = {
     expires,
     ifMatch,
     ifNoneMatch,
-    pragma,
     ifUnmodifiedSince,
+    pragma,
     upgrade,
     vary,
     ifModifiedSince,
