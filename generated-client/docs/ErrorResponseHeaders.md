@@ -17,9 +17,9 @@ Name | Type | Description | Notes
 **origin** | **string** |  | [optional] [default to undefined]
 **contentType** | [**MediaType**](MediaType.md) |  | [optional] [default to undefined]
 **range** | **Array&lt;object&gt;** |  | [optional] [default to undefined]
-**allow** | **Set&lt;object&gt;** |  | [optional] [default to undefined]
 **connection** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **contentLanguage** | [**ErrorResponseHeadersContentLanguage**](ErrorResponseHeadersContentLanguage.md) |  | [optional] [default to undefined]
+**allow** | **Set&lt;object&gt;** |  | [optional] [default to undefined]
 **bearerAuth** | **string** |  | [optional] [default to undefined]
 **cacheControl** | **string** |  | [optional] [default to undefined]
 **etag** | **string** |  | [optional] [default to undefined]
@@ -63,9 +63,9 @@ const instance: ErrorResponseHeaders = {
     origin,
     contentType,
     range,
-    allow,
     connection,
     contentLanguage,
+    allow,
     bearerAuth,
     cacheControl,
     etag,
