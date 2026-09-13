@@ -146,13 +146,13 @@ export interface ErrorResponseHeaders {
     'lastModified'?: number;
     'date'?: number;
     'contentLength'?: number;
+    'bearerAuth'?: string;
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
-    'allow'?: Set<object>;
     'connection'?: Array<string>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
-    'bearerAuth'?: string;
+    'allow'?: Set<object>;
     'cacheControl'?: string;
     'etag'?: string;
     'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
@@ -222,11 +222,11 @@ export interface ErrorResponseHeadersHostAddress {
 }
 export interface HttpStatusCode {
     'error'?: boolean;
-    'is4xxClientError'?: boolean;
-    'is5xxServerError'?: boolean;
     'is1xxInformational'?: boolean;
     'is2xxSuccessful'?: boolean;
     'is3xxRedirection'?: boolean;
+    'is4xxClientError'?: boolean;
+    'is5xxServerError'?: boolean;
 }
 export interface Make {
     'id'?: number;

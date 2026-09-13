@@ -14,13 +14,13 @@ Name | Type | Description | Notes
 **lastModified** | **number** |  | [optional] [default to undefined]
 **date** | **number** |  | [optional] [default to undefined]
 **contentLength** | **number** |  | [optional] [default to undefined]
+**bearerAuth** | **string** |  | [optional] [default to undefined]
 **origin** | **string** |  | [optional] [default to undefined]
 **contentType** | [**MediaType**](MediaType.md) |  | [optional] [default to undefined]
 **range** | **Array&lt;object&gt;** |  | [optional] [default to undefined]
-**allow** | **Set&lt;object&gt;** |  | [optional] [default to undefined]
 **connection** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **contentLanguage** | [**ErrorResponseHeadersContentLanguage**](ErrorResponseHeadersContentLanguage.md) |  | [optional] [default to undefined]
-**bearerAuth** | **string** |  | [optional] [default to undefined]
+**allow** | **Set&lt;object&gt;** |  | [optional] [default to undefined]
 **cacheControl** | **string** |  | [optional] [default to undefined]
 **etag** | **string** |  | [optional] [default to undefined]
 **acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
@@ -60,13 +60,13 @@ const instance: ErrorResponseHeaders = {
     lastModified,
     date,
     contentLength,
+    bearerAuth,
     origin,
     contentType,
     range,
-    allow,
     connection,
     contentLanguage,
-    bearerAuth,
+    allow,
     cacheControl,
     etag,
     acceptLanguage,
