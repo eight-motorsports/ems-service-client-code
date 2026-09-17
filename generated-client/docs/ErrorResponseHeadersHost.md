@@ -5,11 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**hostString** | **string** |  | [optional] [default to undefined]
 **address** | [**ErrorResponseHeadersHostAddress**](ErrorResponseHeadersHostAddress.md) |  | [optional] [default to undefined]
 **port** | **number** |  | [optional] [default to undefined]
 **unresolved** | **boolean** |  | [optional] [default to undefined]
 **hostName** | **string** |  | [optional] [default to undefined]
-**hostString** | **string** |  | [optional] [default to undefined]
 
 ## Example
 
@@ -17,11 +17,11 @@ Name | Type | Description | Notes
 import { ErrorResponseHeadersHost } from './api';
 
 const instance: ErrorResponseHeadersHost = {
+    hostString,
     address,
     port,
     unresolved,
     hostName,
-    hostString,
 };
 ```
 
