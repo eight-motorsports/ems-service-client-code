@@ -14,8 +14,8 @@ Name | Type | Description | Notes
 **modificationDate** | **string** |  | [optional] [default to undefined]
 **readDate** | **string** |  | [optional] [default to undefined]
 **inline** | **boolean** |  | [optional] [default to undefined]
-**attachment** | **boolean** |  | [optional] [default to undefined]
 **formData** | **boolean** |  | [optional] [default to undefined]
+**attachment** | **boolean** |  | [optional] [default to undefined]
 
 ## Example
 
@@ -32,8 +32,8 @@ const instance: ContentDisposition = {
     modificationDate,
     readDate,
     inline,
-    attachment,
     formData,
+    attachment,
 };
 ```
 
