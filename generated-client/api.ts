@@ -137,8 +137,8 @@ export interface ErrorResponse {
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
-    'contentDisposition'?: ContentDisposition;
     'acceptCharset'?: Array<string>;
+    'contentDisposition'?: ContentDisposition;
     'location'?: string;
     'empty'?: boolean;
     'host'?: ErrorResponseHeadersHost;
@@ -149,10 +149,10 @@ export interface ErrorResponseHeaders {
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
+    'bearerAuth'?: string;
     'connection'?: Array<string>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
-    'bearerAuth'?: string;
     'cacheControl'?: string;
     'etag'?: string;
     'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
@@ -260,8 +260,8 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalPages'?: number;
     'totalElements'?: number;
+    'totalPages'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
@@ -1960,7 +1960,7 @@ export const PartsBikeControllerApiAxiosParamCreator = function (configuration?:
                 localVarFormParams.append('picture', picture as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
