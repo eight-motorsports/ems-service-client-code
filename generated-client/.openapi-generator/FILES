@@ -17,8 +17,8 @@ docs/EbayControllerApi.md
 docs/EbayToken.md
 docs/ErrorResponse.md
 docs/ErrorResponseHeaders.md
+docs/ErrorResponseHeadersAcceptLanguageAsLocalesInner.md
 docs/ErrorResponseHeadersAcceptLanguageInner.md
-docs/ErrorResponseHeadersContentLanguage.md
 docs/ErrorResponseHeadersHost.md
 docs/ErrorResponseHeadersHostAddress.md
 docs/HttpStatusCode.md
