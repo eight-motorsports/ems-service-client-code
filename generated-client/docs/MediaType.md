@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **subtype** | **string** |  | [optional] [default to undefined]
 **parameters** | **{ [key: string]: string; }** |  | [optional] [default to undefined]
 **qualityValue** | **number** |  | [optional] [default to undefined]
+**subtypeSuffix** | **string** |  | [optional] [default to undefined]
 **wildcardType** | **boolean** |  | [optional] [default to undefined]
 **wildcardSubtype** | **boolean** |  | [optional] [default to undefined]
-**subtypeSuffix** | **string** |  | [optional] [default to undefined]
 **charset** | **string** |  | [optional] [default to undefined]
 **concrete** | **boolean** |  | [optional] [default to undefined]
 
@@ -25,9 +25,9 @@ const instance: MediaType = {
     subtype,
     parameters,
     qualityValue,
+    subtypeSuffix,
     wildcardType,
     wildcardSubtype,
-    subtypeSuffix,
     charset,
     concrete,
 };
