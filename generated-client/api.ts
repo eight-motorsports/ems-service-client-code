@@ -114,8 +114,8 @@ export interface ContentDisposition {
      */
     'readDate'?: string;
     'inline'?: boolean;
-    'formData'?: boolean;
     'attachment'?: boolean;
+    'formData'?: boolean;
 }
 export interface EbayToken {
     'id'?: number;
@@ -260,8 +260,8 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalElements'?: number;
     'totalPages'?: number;
+    'totalElements'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
