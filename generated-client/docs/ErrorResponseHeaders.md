@@ -22,20 +22,13 @@ Name | Type | Description | Notes
 **allow** | **Set&lt;object&gt;** |  | [optional] [default to undefined]
 **bearerAuth** | **string** |  | [optional] [default to undefined]
 **cacheControl** | **string** |  | [optional] [default to undefined]
-**etag** | **string** |  | [optional] [default to undefined]
-**acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
-**basicAuth** | **string** |  | [optional] [default to undefined]
-**accept** | [**Array&lt;MediaType&gt;**](MediaType.md) |  | [optional] [default to undefined]
-**acceptLanguageAsLocales** | [**Array&lt;ErrorResponseHeadersContentLanguage&gt;**](ErrorResponseHeadersContentLanguage.md) |  | [optional] [default to undefined]
-**acceptPatch** | [**Array&lt;MediaType&gt;**](MediaType.md) |  | [optional] [default to undefined]
-**accessControlAllowCredentials** | **boolean** |  | [optional] [default to undefined]
-**accessControlAllowHeaders** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **accessControlAllowMethods** | **Array&lt;object&gt;** |  | [optional] [default to undefined]
 **accessControlAllowOrigin** | **string** |  | [optional] [default to undefined]
 **accessControlExposeHeaders** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **accessControlMaxAge** | **number** |  | [optional] [default to undefined]
 **accessControlRequestHeaders** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **accessControlRequestMethod** | **object** |  | [optional] [default to undefined]
+**etag** | **string** |  | [optional] [default to undefined]
 **expires** | **number** |  | [optional] [default to undefined]
 **ifMatch** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **ifNoneMatch** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
@@ -43,6 +36,13 @@ Name | Type | Description | Notes
 **pragma** | **string** |  | [optional] [default to undefined]
 **upgrade** | **string** |  | [optional] [default to undefined]
 **vary** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
+**acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
+**basicAuth** | **string** |  | [optional] [default to undefined]
+**accept** | [**Array&lt;MediaType&gt;**](MediaType.md) |  | [optional] [default to undefined]
+**acceptLanguageAsLocales** | [**Array&lt;ErrorResponseHeadersContentLanguage&gt;**](ErrorResponseHeadersContentLanguage.md) |  | [optional] [default to undefined]
+**acceptPatch** | [**Array&lt;MediaType&gt;**](MediaType.md) |  | [optional] [default to undefined]
+**accessControlAllowCredentials** | **boolean** |  | [optional] [default to undefined]
+**accessControlAllowHeaders** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **ifModifiedSince** | **number** |  | [optional] [default to undefined]
 
 ## Example
@@ -68,20 +68,13 @@ const instance: ErrorResponseHeaders = {
     allow,
     bearerAuth,
     cacheControl,
-    etag,
-    acceptLanguage,
-    basicAuth,
-    accept,
-    acceptLanguageAsLocales,
-    acceptPatch,
-    accessControlAllowCredentials,
-    accessControlAllowHeaders,
     accessControlAllowMethods,
     accessControlAllowOrigin,
     accessControlExposeHeaders,
     accessControlMaxAge,
     accessControlRequestHeaders,
     accessControlRequestMethod,
+    etag,
     expires,
     ifMatch,
     ifNoneMatch,
@@ -89,6 +82,13 @@ const instance: ErrorResponseHeaders = {
     pragma,
     upgrade,
     vary,
+    acceptLanguage,
+    basicAuth,
+    accept,
+    acceptLanguageAsLocales,
+    acceptPatch,
+    accessControlAllowCredentials,
+    accessControlAllowHeaders,
     ifModifiedSince,
 };
 ```
