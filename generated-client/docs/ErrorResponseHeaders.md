@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**connection** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **contentDisposition** | [**ContentDisposition**](ContentDisposition.md) |  | [optional] [default to undefined]
 **acceptCharset** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **location** | **string** |  | [optional] [default to undefined]
@@ -17,7 +18,6 @@ Name | Type | Description | Notes
 **origin** | **string** |  | [optional] [default to undefined]
 **contentType** | [**MediaType**](MediaType.md) |  | [optional] [default to undefined]
 **range** | **Array&lt;object&gt;** |  | [optional] [default to undefined]
-**connection** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **contentLanguage** | [**ErrorResponseHeadersContentLanguage**](ErrorResponseHeadersContentLanguage.md) |  | [optional] [default to undefined]
 **allow** | **Set&lt;object&gt;** |  | [optional] [default to undefined]
 **bearerAuth** | **string** |  | [optional] [default to undefined]
@@ -51,6 +51,7 @@ Name | Type | Description | Notes
 import { ErrorResponseHeaders } from './api';
 
 const instance: ErrorResponseHeaders = {
+    connection,
     contentDisposition,
     acceptCharset,
     location,
@@ -63,7 +64,6 @@ const instance: ErrorResponseHeaders = {
     origin,
     contentType,
     range,
-    connection,
     contentLanguage,
     allow,
     bearerAuth,
