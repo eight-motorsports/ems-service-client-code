@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**totalElements** | **number** |  | [optional] [default to undefined]
 **totalPages** | **number** |  | [optional] [default to undefined]
+**totalElements** | **number** |  | [optional] [default to undefined]
 **pageable** | [**PageableObject**](PageableObject.md) |  | [optional] [default to undefined]
 **size** | **number** |  | [optional] [default to undefined]
 **content** | **Array&lt;object&gt;** |  | [optional] [default to undefined]
@@ -23,8 +23,8 @@ Name | Type | Description | Notes
 import { Page } from './api';
 
 const instance: Page = {
-    totalElements,
     totalPages,
+    totalElements,
     pageable,
     size,
     content,
