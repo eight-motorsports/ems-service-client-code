@@ -138,8 +138,8 @@ export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
     'connection'?: Array<string>;
-    'contentDisposition'?: ContentDisposition;
     'acceptCharset'?: Array<string>;
+    'contentDisposition'?: ContentDisposition;
     'location'?: string;
     'empty'?: boolean;
     'host'?: ErrorResponseHeadersHost;
@@ -155,6 +155,7 @@ export interface ErrorResponseHeaders {
     'bearerAuth'?: string;
     'cacheControl'?: string;
     'etag'?: string;
+    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'basicAuth'?: string;
     'accept'?: Array<MediaType>;
     'acceptLanguageAsLocales'?: Array<ErrorResponseHeadersContentLanguage>;
@@ -170,7 +171,6 @@ export interface ErrorResponseHeaders {
     'expires'?: number;
     'ifMatch'?: Array<string>;
     'ifNoneMatch'?: Array<string>;
-    'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'ifUnmodifiedSince'?: number;
     'pragma'?: string;
     'upgrade'?: string;
@@ -904,7 +904,7 @@ export const BikeVariantControllerApiAxiosParamCreator = function (configuration
                 localVarFormParams.append('manual', manual as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
+            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1960,7 +1960,7 @@ export const PartsBikeControllerApiAxiosParamCreator = function (configuration?:
                 localVarFormParams.append('picture', picture as any);
             }
             localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
-            localVarHeaderParameter['Accept'] = 'application/json,text/plain';
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json';
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
