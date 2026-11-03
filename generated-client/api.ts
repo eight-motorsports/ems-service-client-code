@@ -137,9 +137,8 @@ export interface ErrorResponse {
 export interface ErrorResponseHeaders {
     [key: string]: Array<string> | any;
 
-    'connection'?: Array<string>;
-    'acceptCharset'?: Array<string>;
     'contentDisposition'?: ContentDisposition;
+    'acceptCharset'?: Array<string>;
     'location'?: string;
     'empty'?: boolean;
     'host'?: ErrorResponseHeadersHost;
@@ -150,10 +149,11 @@ export interface ErrorResponseHeaders {
     'origin'?: string;
     'contentType'?: MediaType;
     'range'?: Array<object>;
+    'cacheControl'?: string;
+    'connection'?: Array<string>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
     'allow'?: Set<object>;
     'bearerAuth'?: string;
-    'cacheControl'?: string;
     'etag'?: string;
     'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'basicAuth'?: string;
