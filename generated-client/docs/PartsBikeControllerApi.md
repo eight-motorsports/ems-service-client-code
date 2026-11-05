@@ -218,8 +218,8 @@ const { status, data } = await apiInstance.searchPartsBikes(
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-|**401** | Missing or invalid license key |  -  |
 |**200** | Parts bikes searched successfully |  -  |
+|**401** | Missing or invalid license key |  -  |
 |**400** | Invalid search request |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
