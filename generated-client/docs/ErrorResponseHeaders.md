@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**connection** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **contentDisposition** | [**ContentDisposition**](ContentDisposition.md) |  | [optional] [default to undefined]
 **acceptCharset** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **location** | **string** |  | [optional] [default to undefined]
@@ -14,17 +15,15 @@ Name | Type | Description | Notes
 **lastModified** | **number** |  | [optional] [default to undefined]
 **date** | **number** |  | [optional] [default to undefined]
 **contentLength** | **number** |  | [optional] [default to undefined]
-**cacheControl** | **string** |  | [optional] [default to undefined]
 **origin** | **string** |  | [optional] [default to undefined]
 **contentType** | [**MediaType**](MediaType.md) |  | [optional] [default to undefined]
 **range** | **Array&lt;object&gt;** |  | [optional] [default to undefined]
-**connection** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **contentLanguage** | [**ErrorResponseHeadersContentLanguage**](ErrorResponseHeadersContentLanguage.md) |  | [optional] [default to undefined]
 **allow** | **Set&lt;object&gt;** |  | [optional] [default to undefined]
 **bearerAuth** | **string** |  | [optional] [default to undefined]
+**cacheControl** | **string** |  | [optional] [default to undefined]
 **etag** | **string** |  | [optional] [default to undefined]
 **acceptLanguage** | [**Array&lt;ErrorResponseHeadersAcceptLanguageInner&gt;**](ErrorResponseHeadersAcceptLanguageInner.md) |  | [optional] [default to undefined]
-**basicAuth** | **string** |  | [optional] [default to undefined]
 **accept** | [**Array&lt;MediaType&gt;**](MediaType.md) |  | [optional] [default to undefined]
 **acceptLanguageAsLocales** | [**Array&lt;ErrorResponseHeadersContentLanguage&gt;**](ErrorResponseHeadersContentLanguage.md) |  | [optional] [default to undefined]
 **acceptPatch** | [**Array&lt;MediaType&gt;**](MediaType.md) |  | [optional] [default to undefined]
@@ -40,6 +39,7 @@ Name | Type | Description | Notes
 **ifMatch** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **ifNoneMatch** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
 **ifUnmodifiedSince** | **number** |  | [optional] [default to undefined]
+**basicAuth** | **string** |  | [optional] [default to undefined]
 **pragma** | **string** |  | [optional] [default to undefined]
 **upgrade** | **string** |  | [optional] [default to undefined]
 **vary** | **Array&lt;string&gt;** |  | [optional] [default to undefined]
@@ -51,6 +51,7 @@ Name | Type | Description | Notes
 import { ErrorResponseHeaders } from './api';
 
 const instance: ErrorResponseHeaders = {
+    connection,
     contentDisposition,
     acceptCharset,
     location,
@@ -60,17 +61,15 @@ const instance: ErrorResponseHeaders = {
     lastModified,
     date,
     contentLength,
-    cacheControl,
     origin,
     contentType,
     range,
-    connection,
     contentLanguage,
     allow,
     bearerAuth,
+    cacheControl,
     etag,
     acceptLanguage,
-    basicAuth,
     accept,
     acceptLanguageAsLocales,
     acceptPatch,
@@ -86,6 +85,7 @@ const instance: ErrorResponseHeaders = {
     ifMatch,
     ifNoneMatch,
     ifUnmodifiedSince,
+    basicAuth,
     pragma,
     upgrade,
     vary,
