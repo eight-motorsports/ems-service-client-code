@@ -150,10 +150,11 @@ export interface ErrorResponseHeaders {
     'contentType'?: MediaType;
     'range'?: Array<object>;
     'connection'?: Array<string>;
-    'allow'?: Set<object>;
     'contentLanguage'?: ErrorResponseHeadersContentLanguage;
+    'allow'?: Set<object>;
     'bearerAuth'?: string;
     'cacheControl'?: string;
+    'etag'?: string;
     'acceptLanguage'?: Array<ErrorResponseHeadersAcceptLanguageInner>;
     'basicAuth'?: string;
     'accept'?: Array<MediaType>;
@@ -167,7 +168,6 @@ export interface ErrorResponseHeaders {
     'accessControlMaxAge'?: number;
     'accessControlRequestHeaders'?: Array<string>;
     'accessControlRequestMethod'?: object;
-    'etag'?: string;
     'expires'?: number;
     'ifMatch'?: Array<string>;
     'ifNoneMatch'?: Array<string>;
@@ -260,8 +260,8 @@ export interface Model {
     'variants'?: Array<BikeVariant>;
 }
 export interface Page {
-    'totalPages'?: number;
     'totalElements'?: number;
+    'totalPages'?: number;
     'pageable'?: PageableObject;
     'size'?: number;
     'content'?: Array<object>;
