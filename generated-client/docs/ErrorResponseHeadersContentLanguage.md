@@ -1,4 +1,4 @@
-# ErrorResponseHeadersAcceptLanguageAsLocalesInner
+# ErrorResponseHeadersContentLanguage
 
 
 ## Properties
@@ -23,9 +23,9 @@ Name | Type | Description | Notes
 ## Example
 
 ```typescript
-import { ErrorResponseHeadersAcceptLanguageAsLocalesInner } from './api';
+import { ErrorResponseHeadersContentLanguage } from './api';
 
-const instance: ErrorResponseHeadersAcceptLanguageAsLocalesInner = {
+const instance: ErrorResponseHeadersContentLanguage = {
     language,
     displayName,
     country,
