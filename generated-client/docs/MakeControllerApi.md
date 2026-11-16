@@ -54,9 +54,9 @@ const { status, data } = await apiInstance.createMake(
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-|**401** | Missing or invalid license key |  -  |
-|**200** | Make created successfully |  -  |
 |**400** | Invalid request body |  -  |
+|**200** | Make created successfully |  -  |
+|**401** | Missing or invalid license key |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
